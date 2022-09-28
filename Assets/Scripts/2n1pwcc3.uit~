@@ -1,0 +1,22 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class jumpPad : MonoBehaviour
+{
+    public float jump;
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //if either of the players hit the collider then it propels them up vertically
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * jump, ForceMode2D.Impulse);
+        }
+
+        if (collision.gameObject.CompareTag("Player1"))
+        {
+            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * jump, ForceMode2D.Impulse);
+        }
+    }
+}

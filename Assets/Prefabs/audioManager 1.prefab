@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1329296425207400717
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1329296425207400707}
+  - component: {fileID: 1329296425207400706}
+  m_Layer: 0
+  m_Name: audioManager 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1329296425207400707
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329296425207400717}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1329296425207400706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329296425207400717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4af32ad27714e8348bc1ff9f811dd798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: slime
+    clip: {fileID: 8300000, guid: 5731d4fe602ac7d4b9119db468ba492f, type: 3}
+    volume: 0.496
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: collected
+    clip: {fileID: 8300000, guid: 024c102b7141df04486ab7e2f6ea8146, type: 3}
+    volume: 0.545
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: backgroundMossy
+    clip: {fileID: 8300000, guid: a2c4d2f9e85c3df4caffcdf777ee2eb8, type: 3}
+    volume: 0.16
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: cave
+    clip: {fileID: 8300000, guid: 61fe3384adc3cfd49aa5047aa8f8536e, type: 3}
+    volume: 0.16
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: bouncePlant
+    clip: {fileID: 8300000, guid: 1229af53e156bf34b9ded24fb855a3bd, type: 3}
+    volume: 0.16
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: jump
+    clip: {fileID: 8300000, guid: 9b32d6743bb4c704091e9afe72b72f08, type: 3}
+    volume: 0.16
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: dash
+    clip: {fileID: 8300000, guid: 09735637380b71f4c948764f0c84bda6, type: 3}
+    volume: 0.16
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: completed
+    clip: {fileID: 8300000, guid: 8e0d81b368e518e4092242703017f68a, type: 3}
+    volume: 0.16
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: astral
+    clip: {fileID: 8300000, guid: 76c5a651f072c8544b6a2894a4f85536, type: 3}
+    volume: 0.16
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: astralDestroyed
+    clip: {fileID: 8300000, guid: 969d017a149a41548a6d9401d80527e3, type: 3}
+    volume: 0.16
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: menuSound
+    clip: {fileID: 8300000, guid: 03b8b6e0ef256b244942de84c65b4265, type: 3}
+    volume: 0.16
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: button
+    clip: {fileID: 8300000, guid: 26bb243226ef8e2418462233c9ccbc90, type: 3}
+    volume: 0.16
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: health
+    clip: {fileID: 8300000, guid: 338bebf431c2af0479480641da94c399, type: 3}
+    volume: 0.16
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

@@ -1,0 +1,68 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class UIController : MonoBehaviour
+{
+    //This script controls everything I want to appear on the UI. 
+    public static int health;
+    public Text healthText;
+    
+
+    public float timeRemaining;
+    public bool timerIsRunning;
+    public Text timeText;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        health = 3;
+        timeRemaining = 15;
+       
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        //sets the text of the Text UI object created to whatever value health is set as. In another script the value of health will be altered.
+        healthText.text = "Health: " + health;
+
+        if(DeployAstral.astralAlive == true)
+        {
+            timerIsRunning = true;
+            timeText.gameObject.SetActive(true);
+        } else
+        {
+            timerIsRunning = false;
+            timeText.gameObject.SetActive(false);
+            timeRemaining = 15;
+        }
+
+        if (timerIsRunning)
+        {
+            if (timeRemaining > 0)
+            {
+                timeRemaining -= Time.deltaTime;
+                DisplayTime(timeRemaining);
+            }
+            else
+            {
+                Debug.Log("Time has run out!");
+                timeRemaining = 0;
+                timerIsRunning = false;
+            }
+        }
+
+    }
+
+    void DisplayTime(float timeToDisplay)
+    {
+        timeToDisplay += 1;
+
+        float minutes = Mathf.FloorToInt(timeToDisplay / 60);
+        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+
+        timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+}

@@ -1,0 +1,42 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class DeployAstral : MonoBehaviour
+{
+    public GameObject astralPrefab;
+    public Vector2 wizardPosition;
+    public static bool astralAlive = false;
+
+    private void spawnAstral()
+    {
+        GameObject astral = Instantiate(astralPrefab) as GameObject;
+        astral.transform.position = new Vector2(wizardPosition.x + 2, wizardPosition.y);
+    }
+
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+       
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        wizardPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
+
+        if (Input.GetButtonDown("Jump") && astralAlive == false)
+        {
+            spawnAstral();
+            astralAlive = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Destroy(GameObject.FindGameObjectWithTag("Player1"));
+        }
+
+    }
+}

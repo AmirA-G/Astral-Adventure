@@ -1,0 +1,70 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerCollision : MonoBehaviour
+{
+    //a script I created to store all collision interactions
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //if the astral collides with the player...
+        if (collision.CompareTag("Player1"))
+        {
+            AstralAndPlayerCollision();
+        }
+        //if the enemy collides with the player...
+        if (collision.CompareTag("Enemy"))
+        {
+            DamagePlayer();
+        }
+        //if the player collides with the key...
+        if (collision.CompareTag("Key"))
+        {
+            KeyFound();
+        }
+        //if the player collides with the collectable...
+        if (collision.CompareTag("Collectable"))
+        {
+            CollectableFound();
+        }
+        //if the player collides with the PowerUp...
+        if (collision.CompareTag("PowerUp"))
+        {
+            PowerUpFound();
+        }
+    }
+
+    void AstralAndPlayerCollision()
+    {
+        //most of these simply destroy the given object the player interacts with.
+        Debug.Log("hit");
+        DeployAstral sn = GameObject.FindObjectOfType(typeof(DeployAstral)) as DeployAstral;
+        sn.DestroyAstra();
+    }
+
+    void DamagePlayer()
+    {
+        Debug.Log("ouch");
+    }
+
+    void CollectableFound()
+    {
+        Debug.Log("Wow");
+        GameObject collectable = GameObject.FindGameObjectWithTag("Collectable");
+        Destroy(collectable);
+    }
+
+    void KeyFound()
+    {
+        Debug.Log("Nice");
+        GameObject key = GameObject.FindGameObjectWithTag("Key");
+        Destroy(key);
+    }
+
+    void PowerUpFound()
+    {
+        Debug.Log("Cool");
+        GameObject powerUp = GameObject.FindGameObjectWithTag("PowerUp");
+        Destroy(powerUp);
+    }
+}

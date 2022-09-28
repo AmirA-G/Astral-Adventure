@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Player1
+  - object
+  - button
+  - Enemy
+  - PowerUp
+  - Collectable
+  - Key
+  - Exit
+  - Hazard
+  - MossyTrigger
+  - CaveTrigger
+  - PortalWall
+  - Crossway
+  - DescendingWall
+  - DashPuP
+  - destroyPillar
+  - pillar
+  - spikes
+  - Water
+  - Bullet
+  - Exit2
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Player
+  - Water
+  - UI
+  - Player1
+  - health
+  - door
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
